@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+//MEMBUAT KELAS motor
+struct MOTOR {
+    string merk;
+    int tahun;
+    string nopolisi;
+    string warna;
+};
+MOTOR input;
+
+    void setMotor () {
+        cout << "Merk      = ";
+        cin >> input.merk;
+        cout << "Tahun     = ";
+        cin >> input.tahun;
+        cout << "No Polisi = ";
+        cin >> input.nopolisi;
+        cout << "Warna     = ";
+        cin >> input.warna;
+        }
+
+    void ShowInfoMotor() {
+        cout << endl << "--------Data Motor----------" << endl << endl;
+        cout << "Merk       :  " << input.merk << endl;
+        cout << "Tahun      :  " << input.tahun << endl;
+        cout << "No Polisi  :  " << input.nopolisi << endl;
+        cout << "Warna      :  " << input.warna << endl;
+    }
+
+//Fungsi Utama
+int main() {
+
+    // melakukan instansisasi terhadap kelas MOTOR
+    MOTOR M;
+
+    setMotor();
+    ShowInfoMotor();
+
+    return 0;
+}
