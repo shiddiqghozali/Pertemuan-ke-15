@@ -1,0 +1,64 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+//MEMBUAT KELAS motor
+struct MAHASISWA {
+    float nim;
+    string nama;
+    float tlp;
+    int tugas;
+    int uts;
+    int uas;
+    int quiz;
+    float akhir;
+};
+MAHASISWA input;
+
+    void setMhs () {
+        cout << "NIM         = ";
+        cin >> input.nim;
+        cout << "Nama        = ";
+        cin >> input.nama;
+        cout << "No Telepon  = ";
+        cin >> input.tlp;
+        cout << "Nilai Tugas = ";
+        cin >> input.tugas;
+        cout << "Nilai UTS   = ";
+        cin >> input.uts;
+        cout << "Nilai UAS   = ";
+        cin >> input.uas;
+        cout << "Nilai Quiz  = ";
+        cin >> input.quiz;
+        }
+
+    void ShowInfoMhs() {
+        cout << endl << "--------Data Mahasiswa----------" << endl << endl;
+        cout << "NIM         = " << input.nim << endl;
+        cout << "Nama        = " << input.nama << endl;
+        cout << "No Telepon  = " << input.tlp << endl;
+        cout << "Nilai Tugas = " << input.tugas << endl;
+        cout << "Nilai UTS   = " << input.uts << endl;
+        cout << "Nilai UAS   = " << input.uas << endl;
+        cout << "Nilai Quiz  = " << input.quiz << endl;
+    }
+
+    void NilaiAkhir ()
+    {
+        input.akhir = 0.25*input.uas+0.25*input.uts+0.3*input.tugas+0.2*input.quiz;
+        cout << "Nilai Akhir  = " << input.akhir << endl;
+    }
+
+//Fungsi Utama
+int main() {
+
+    // melakukan instansisasi terhadap kelas MOTOR
+    MAHASISWA input;
+
+    setMhs();
+    ShowInfoMhs();
+    NilaiAkhir();
+
+    return 0;
+}
